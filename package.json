@@ -1,0 +1,10 @@
+{
+  "name": "tab-tally",
+  "version": "0.1.0",
+  "description": "A small Chrome extension that counts tabs, windows, and tab groups.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/stats.test.mjs"
+  },
+  "license": "MIT"
+}

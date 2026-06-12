@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Tally",
+  "version": "0.1.0",
+  "description": "Tab Tally gives you a quick count of your open tabs, browser windows, and tab groups.",
+  "permissions": ["tabGroups"],
+  "action": {
+    "default_title": "Tab Tally",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

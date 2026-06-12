@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tab Tally</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <h1>Tab Tally</h1>
+        <button id="refresh" class="icon-button" type="button" title="Refresh counts" aria-label="Refresh counts">
+          <span aria-hidden="true">↻</span>
+        </button>
+      </header>
+
+      <section id="status" class="status" role="status">Loading counts...</section>
+
+      <section class="summary" aria-label="Browser totals">
+        <article class="metric">
+          <span class="metric-label">Tabs</span>
+          <strong id="total-tabs">-</strong>
+        </article>
+        <article class="metric">
+          <span class="metric-label">Windows</span>
+          <strong id="total-windows">-</strong>
+        </article>
+        <article class="metric">
+          <span class="metric-label">Groups</span>
+          <strong id="total-groups">-</strong>
+        </article>
+      </section>
+
+      <section class="details" aria-label="Tab grouping">
+        <div class="detail-row">
+          <span>Grouped tabs</span>
+          <strong id="grouped-tabs">-</strong>
+        </div>
+        <div class="detail-row">
+          <span>Ungrouped tabs</span>
+          <strong id="ungrouped-tabs">-</strong>
+        </div>
+        <div class="detail-row">
+          <span>Incognito windows</span>
+          <strong id="incognito-windows">-</strong>
+        </div>
+      </section>
+
+      <section class="window-list" aria-label="Windows">
+        <h2>Windows</h2>
+        <div id="windows"></div>
+      </section>
+    </main>
+
+    <template id="window-template">
+      <article class="window-card">
+        <div>
+          <strong class="window-title"></strong>
+          <span class="window-meta"></span>
+        </div>
+        <div class="window-counts">
+          <span class="pill tab-pill"></span>
+          <span class="pill group-pill"></span>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
