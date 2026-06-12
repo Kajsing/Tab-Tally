@@ -33,3 +33,7 @@ You can also open `test.html` directly in a browser to preview the popup UI with
 ## License
 
 MIT
+
+## Privacy
+
+Tab Tally does not collect, store, transmit, sell, or share personal data. See [PRIVACY.md](PRIVACY.md) for details.
